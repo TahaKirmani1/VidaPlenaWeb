@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vida Plena – Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #dcccf1;
+      font-family: 'Poppins', sans-serif;
+      color: #4B007D;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .container {
+      z-index: 2;
+      padding: 20px;
+      max-width: 500px;
+    }
+
+    img.logo {
+      width: 250px;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    input[type="email"] {
+      padding: 12px 15px;
+      border: none;
+      border-radius: 8px;
+      width: 70%;
+      margin-right: 10px;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 12px 20px;
+      border: none;
+      background-color: #7E4EAD;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background-color: #5E3D89;
+    }
+
+    .balloon {
+      position: absolute;
+      bottom: -150px;
+      width: 50px;
+      height: 70px;
+      background-color: #b87ee3;
+      border-radius: 50% 50% 45% 45%;
+      animation: float 10s infinite ease-in-out;
+      opacity: 0.3;
+    }
+
+    .balloon::after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      width: 2px;
+      height: 20px;
+      background-color: #b87ee3;
+      transform: translateX(-50%);
+    }
+
+    .balloon:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .balloon:nth-child(2) { left: 30%; animation-delay: 3s; }
+    .balloon:nth-child(3) { left: 50%; animation-delay: 1.5s; }
+    .balloon:nth-child(4) { left: 70%; animation-delay: 5s; }
+    .balloon:nth-child(5) { left: 90%; animation-delay: 2s; }
+
+    @keyframes float {
+      0% { bottom: -100px; }
+      50% { bottom: 110%; }
+      100% { bottom: -100px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Balloons -->
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+
+  <div class="container">
+    <img src="vidaplena_logo.png" alt="Vida Plena Logo" class="logo" />
+    <h1>We're Almost Ready!</h1>
+    <p>The Vida Plena app isn't on the store just yet — but it's launching soon!  
+    Want early access? Drop your email below and we'll add you as a tester.</p>
+    <form onsubmit="event.preventDefault(); alert('Thank you! We’ll be in touch soon.');">
+      <input type="email" placeholder="Enter your email" required />
+      <button type="submit">Get Early Access</button>
+    </form>
+  </div>
+</body>
+</html>
